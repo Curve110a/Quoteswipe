@@ -1,15 +1,11 @@
-const slider = document.getElementById( "menuLip" );
-const menu = document.getElementById( "menu" );
+const slider = document.getElementById("menuLip");
+const menu = document.getElementById("menu");
 
-slider.addEventListener( 'click', event =>
-{
-    if ( menu.style.height= "40%" )
-    {
-    menu.style.height = "0";        
-    } else
-    {
-        menu.style.height = "40%";
-    }
+slider.addEventListener('click', event => {
+    if (menu.clientHeight == 60) {
+            menu.style.height = "5px";
+        } else if (menu.clientHeight == 5){
+            menu.style.height = "60px";
+        }
 
-
-} );
+    } );
