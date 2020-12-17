@@ -13,28 +13,42 @@
     <main>
         <div class="title">Quote<span class="titleRed">SWIPE</span></div>
 
+        <!-- vlakken links en rechts waar quotes in worden geschoven -->
         <div id="leftSwipe"></div>
         <div id="rightSwipe"></div>
 
-        <div id="quote"></div>
+        <!-- getoonde quote -->
+        <div id="quote" ></div>
 
         <div id="menuContainer">
+            <!-- Menu: -->
             <div id="menu">
-            <img id="menuLip" src="./styles/img/lip.png" alt="">
+                <!-- lipje boven menu -->
+                <img id="menuLip" src="./styles/img/lip.png" alt="">
 
                 <div id="iconContainer">
                     <!-- <img class="icon" src="./styles/img/icons/share" alt="share"> -->
-                    <i class="svg fas fa-share"></i>
-                    <img class="icon" src="./styles/img/icons/account" alt="account">
-                    <img class="icon" src="./styles/img/icons/quotemaker" alt="QM" onclick="window.location='https://quotemaker.spreadthequote.nl';">
-                    <img class="icon" src="./styles/img/icons/settings" alt="settings">
-                    <img class="icon" src="./styles/img/icons/paypal" alt="paypal">
-                    
+
+
+                    <!-- Begin icons -->
+                    <i class="svg fas fa-share" ></i>
+                    <i class="svg fas fa-user" onclick="window.location='./account.php';"></i>
+                    <?php echo file_get_contents("./styles/img/icons/qm.svg"); ?>
+                    <i class="svg fas fa-cog" onclick="window.location='./settings.php';"></i>
+                    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input autocomplete="off" type="hidden" name="cmd" value="_s-xclick" />
+                        <input autocomplete="off" type="hidden" name="hosted_button_id" value="PZQQZP3G62NCL" />
+                        <button class="paypalButton tooltip"><i class="svg fab fa-paypal" style="font-weight: 100;margin-top: -7px;"></i></button>
+                    </form>
+                    <!-- einde icons -->
+
                 </div>
             </div>
         </div>
 
     </main>
 </body>
+<!-- link naar javascript file -->
 <script src="index.js"></script>
+
 </html>

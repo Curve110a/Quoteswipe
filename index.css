@@ -73,7 +73,7 @@
     "left . quote . right"
     "left menu menu menu right" ;
   }
-  i{
+  i, .qm{
     color: #f1f1f1;
     font-size: 35px;
     transition: all 0.2s ease;
@@ -88,6 +88,7 @@
     background-color: #E05E67;
     background-image: url(./styles/img/QS_squere_BG_left.png);
     background-size: cover;
+    z-index: 100;
   }
   #rightSwipe{
     grid-area: right;
@@ -95,13 +96,16 @@
     background-color: #4c9991;
     background-image: url(./styles/img/QS_squere_BG_right.png);
     background-size: cover;
+    z-index: 101;
   }
   #quote{
     grid-area: quote;
-    background-image: url(./styles/img/background1.jpg);
+    /* background-image: url(./styles/img/background1.jpg); */
+    border: solid #67809F 5px;
+    /* background-color: #E05E67; */
     background-size: cover;
-    width: 100%;
-    height: 80%;
+    width: 310px;
+    height: 413px;
     display: flex;
     align-self: center;
   }
@@ -124,7 +128,7 @@
 
   #menuLip{
     position: absolute;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -100%);
     left: 50%;
     width: 70px;
   }
@@ -136,27 +140,34 @@
     height: 100%;
   }
   .svg{
-    grid-area: 1;
+    /* grid-area: 1; */
     font-size: 40px;
-    text-align: center;
+    max-width: 40px;
+    max-height: 40px;
+    justify-self: center;
+    align-self: center;
+    padding: 6px;
   }
-  .icon{
-    height: 40px;
-    padding: 10px;
-    /* justify-self: center; */
-    position: relative;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-  }
-  .icon:hover{
-    cursor: pointer;
-  }
-  #iconContainer:hover > img {
-    background-color: none;
-  }
-  #iconContainer:hover > img:hover {
+  .svg:hover{
     background-color: #f1f1f1;
-    opacity: 0;
+    color: #67809F;
   }
+  #paypalForm{
+    width: 40px;
+    height: 40px;
+    justify-self: center;
+    align-self: center;
+  }
+.qm{
+  stroke: #f1f1f1;
+}
+.qm:hover{
+  background-color: #f1f1f1;
+  stroke: #67809F;
+}
+.paypalButton{
+  width: 0px !important;
+  height: 0px !important;
+  border: none !important;
+  padding: 0 !important;
+}
